@@ -1,0 +1,33 @@
+
+1. <section header>
+
+2. <section top>
+    bg画像＋それにかぶるようにtext
+
+3. <section concept>
+    画像＋text
+
+4. <section feature>
+    card 3枚(画像とtext)
+    横幅いっぱいの画像
+
+5. <section products>
+    card 3枚(画像とtext)
+    moreボタン
+    
+
+6. <section news>
+    画像＋text＊３
+    moreボタン
+    左にtext＋右に画像
+
+7. <section contact>
+    外形画像付き
+
+8. <section footer>
+
+
+
+
+
+ 

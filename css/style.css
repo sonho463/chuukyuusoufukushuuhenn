@@ -1,0 +1,11 @@
+@media screen and (max-width: 767px) {
+  .header-logo {
+    background-color: blue;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .top-text {
+    color: red;
+  }
+}

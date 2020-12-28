@@ -1,0 +1,12 @@
+.header-logo{
+  @include mq(sp){
+   
+    background-color: blue;
+  }
+}
+
+.top-text{
+  @include mq(sp){
+    color:red;
+  }
+}
