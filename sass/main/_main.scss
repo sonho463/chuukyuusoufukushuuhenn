@@ -199,6 +199,7 @@ img{
 }
 
 
+
 /*========================================
        # about
 ========================================*/
@@ -236,14 +237,51 @@ img{
   }
 }
 
+
+
 /*========================================
        # products
 ========================================*/
+
+.products{
+  max-width: 940px;
+}
+
+.products-list{
+  margin-top: 64px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.products-item{
+  flex:0 0 27.65%;
+}
+
+.products-item-link{
+  display: block;
+  color: $font-color;
+  font-size: 14px;
+}
+
+.products-item-text{
+  padding: 24px 0 16px;
+}
+
+.products-item-cost{
+  color: #989898;
+}
+
+.products-footer{
+  text-align: center;
+  margin-top: 48px;
+}
+
 
 
 /*========================================
        # news
 ========================================*/
+
 
 
 /*========================================
