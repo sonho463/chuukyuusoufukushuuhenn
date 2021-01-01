@@ -8,18 +8,9 @@ $font-color:#333333;
 // color 透過度
 // color マーカー
 // color アイコン
-// size 
+
+// size テキスト
+$font-size-main: 16px;
 
 
-// common - 全体に共通するスタイル
-@include mq(sp){
-  .is-pc{
-    display: none;
-  }
-}
 
-@include mq(pc){
-  .is-sp{
-    display: none;
-  }
-}

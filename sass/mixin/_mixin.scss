@@ -12,3 +12,21 @@ $breakpoints:(
     @content;
   }
 } 
+// common - 全体に共通するスタイル
+@include mq(sp){
+  .is-pc{
+    display: none;
+  }
+}
+
+@include mq(pc){
+  .is-sp{
+    display: none;
+  }
+}
+
+/*========================================
+       # header
+========================================*/
+
+

@@ -1,12 +1,321 @@
-.header-logo{
-  @include mq(sp){
-   
-    background-color: blue;
+
+
+  /*========================================
+         # 全体共通部分
+  ========================================*/
+
+body{
+  font-size: $font-size-main;
+  color: $font-color;
+  font-family: "ヒラギノ明朝 ProN" , serif;
+  line-height: (27 / 16) ;
+}
+
+img{
+  width: 100%;
+}
+
+.section{
+  margin-top: 160px !important;
+}
+
+// sectionのタイトル
+.section-title{
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1;
+
+// タイトルの下の線
+  &::after{
+    content: "";
+    display: block;
+    margin: 16px auto 0;
+    background: $primary-color;
+    height: 2px;
+    width: 60px;
   }
 }
 
-.top-text{
-  @include mq(sp){
-    color:red;
+// moreのボタン
+.util-link{      
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  color: $primary-color;
+  font-weight: 600;
+  border: 1px solid $primary-color;
+  display: inline-block;
+  padding: 10px 54px;
+}
+
+
+
+/*========================================
+       # hearder
+========================================*/
+
+.header{
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.inner{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: content-box;
+}
+
+
+.header-inner{
+  display: flex;
+  align-items: center;
+}
+
+.header-nav{
+  margin-left: auto;
+}
+
+.header-logo{
+  width: 120px;
+}
+
+.header-nav-list{
+  display: flex;
+}
+
+.hearder-nav-item{
+  margin-left: 46px;
+  &:first-child{
+    margin-left: 0;
   }
 }
+
+.header-nav-item-link{
+  display: block;
+  color: $font-color;
+  height: 70px;
+  line-height: 70px;
+  letter-spacing: (1.6 / 16);  // 0.1emでも同じ (AV1.6px / 文字サイス16px )
+}
+
+// hearderで隠れた部分を出してあげる
+.main{
+  padding-top: 70px;  
+}
+
+
+
+/*========================================
+        # top
+========================================*/
+
+.top{
+  position: relative;
+}
+
+.top-picture{
+  padding-top: 55%;
+  background: url(/img/top.png) no-repeat top right / 82.5% ;
+}
+
+
+.top-title{
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.top-text{
+  margin-top: 18px;
+}
+
+.top-message{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  padding: 92px 40px 92px 0;
+}
+
+
+/*========================================
+       # concept
+========================================*/
+
+.concept-inner{
+  margin-top: 64px;
+  display: flex;
+  align-items: center;
+}
+
+.concept-picture{
+  flex: 0 0 50%;
+}
+
+
+.concept-message{
+  margin-left: 6.667%;
+  flex:0 1 50%;
+}
+
+.concept-message-title{
+  font-weight: bold;
+  font-size: 20px;
+}
+.concept-message-text{
+  margin-top: 48px;
+}
+
+
+
+/*========================================
+       # feature
+========================================*/
+
+.feature-list{
+  margin-top: 64px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.feature-item{
+  width: calc(33.3% - 91px * 2 / 3);
+  margin-right: 91px;
+  &:last-child{
+    margin-right: 0;
+  }
+}
+
+.feature-item-text{
+  text-align: center;
+  padding: 32px 0;
+  box-shadow:3px 3px 15px #60606029;
+  font-weight: bold;
+  color: $font-color;
+}
+
+
+/*========================================
+       # about
+========================================*/
+
+.about{
+  color: #fff;
+  width: 100%;
+  height: 478px;
+  background: url(/img/bg.png) center center/ cover  ;
+  position: relative;
+
+  &::after{
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: #000;
+    opacity: 0.12;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+  }
+}
+
+.about-inner{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 6;
+  .about-title{
+    margin-bottom: 40px;
+    font-size: 22px;
+    font-weight: bold;
+  }
+}
+
+/*========================================
+       # products
+========================================*/
+
+
+/*========================================
+       # news
+========================================*/
+
+
+/*========================================
+       # concept2
+========================================*/
+
+
+/*========================================
+       # contact
+========================================*/
+
+
+/*========================================
+       # footer
+========================================*/
+
+
+.footer{
+  background: #F7F7F7;
+  padding: 42px 40px 12px;
+}
+
+.footer-logo{
+  width: 120px;
+  margin: 0 auto;
+  padding-bottom: 18px;
+}
+
+.footer-nav-list{
+  display: flex;
+  justify-content: center;
+}
+
+.footer-nav-item{
+  &+&{
+   padding-left: 12px;
+  }
+}
+
+.footer-nav-item-link{
+  font-size: 12px;
+  color: $font-color;
+  display: block;
+  padding: .5em 0;
+}
+
+.footer-sns-list{
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 15px 0;
+}
+
+
+.footer-sns-item{
+  &+&{
+    margin-left: 20px;
+  }
+
+}
+
+.footer-sns-item-link{
+  display: block;
+  padding: 0.2em 0.5em;
+  font-size: 22px;
+  color: #3EA1D1;
+}
+
+.footer-copyright{
+  color: #888888;
+  font-size: 12px;
+  text-align: center;
+ 
+}
+
+
