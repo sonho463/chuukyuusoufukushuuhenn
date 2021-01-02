@@ -1,33 +1,31 @@
-
-
-  /*========================================
+/*========================================
          # 全体共通部分
   ========================================*/
 
-body{
+body {
   font-size: $font-size-main;
   color: $font-color;
-  font-family: "ヒラギノ明朝 ProN" , serif;
-  line-height: (27 / 16) ;
+  font-family: "ヒラギノ明朝 ProN", serif;
+  line-height: (27 / 16);
 }
 
-img{
+img {
   width: 100%;
 }
 
-.section{
+.section {
   margin-top: 160px !important;
 }
 
 // sectionのタイトル
-.section-title{
+.section-title {
   font-size: 40px;
   font-weight: 600;
   text-align: center;
   line-height: 1;
 
-// タイトルの下の線
-  &::after{
+  // タイトルの下の線
+  &::after {
     content: "";
     display: block;
     margin: 16px auto 0;
@@ -38,7 +36,7 @@ img{
 }
 
 // moreのボタン
-.util-link{      
+.util-link {
   font-size: 14px;
   letter-spacing: 0.1em;
   color: $primary-color;
@@ -48,13 +46,11 @@ img{
   padding: 10px 54px;
 }
 
-
-
 /*========================================
        # hearder
 ========================================*/
 
-.header{
+.header {
   background: #fff;
   position: fixed;
   top: 0;
@@ -63,77 +59,73 @@ img{
   z-index: 100;
 }
 
-.inner{
+.inner {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 40px;
   box-sizing: content-box;
 }
 
-
-.header-inner{
+.header-inner {
   display: flex;
   align-items: center;
 }
 
-.header-nav{
+.header-nav {
   margin-left: auto;
 }
 
-.header-logo{
+.header-logo {
   width: 120px;
 }
 
-.header-nav-list{
+.header-nav-list {
   display: flex;
 }
 
-.hearder-nav-item{
+.hearder-nav-item {
   margin-left: 46px;
-  &:first-child{
+  &:first-child {
     margin-left: 0;
   }
 }
 
-.header-nav-item-link{
+.header-nav-item-link {
   display: block;
   color: $font-color;
   height: 70px;
   line-height: 70px;
-  letter-spacing: (1.6 / 16);  // 0.1emでも同じ (AV1.6px / 文字サイス16px )
+  letter-spacing: (1.6 / 16); // 0.1emでも同じ (AV1.6px / 文字サイス16px )
 }
 
 // hearderで隠れた部分を出してあげる
-.main{
-  padding-top: 70px;  
+.main {
+  padding-top: 70px;
 }
-
-
 
 /*========================================
         # top
 ========================================*/
 
-.top{
+.top {
   position: relative;
 }
 
-.top-picture{
+.top-picture {
   padding-top: 55%;
-  background: url(/img/top.png) no-repeat top right / 82.5% ;
+  background: url(/img/top.png) no-repeat top right / 82.5%;
 }
 
-
-.top-title{
+.top-title {
   font-size: 26px;
   font-weight: bold;
 }
 
-.top-text{
+.top-text {
   margin-top: 18px;
 }
 
-.top-message{
+.top-message {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -141,77 +133,71 @@ img{
   padding: 92px 40px 92px 0;
 }
 
-
 /*========================================
        # concept
 ========================================*/
 
-.concept-inner{
+.concept-inner {
   margin-top: 64px;
   display: flex;
   align-items: center;
 }
 
-.concept-picture{
+.concept-picture {
   flex: 0 0 50%;
 }
 
-
-.concept-message{
+.concept-message {
   margin-left: 6.667%;
-  flex:0 1 50%;
+  flex: 0 1 50%;
 }
 
-.concept-message-title{
+.concept-message-title {
   font-weight: bold;
   font-size: 20px;
 }
-.concept-message-text{
+.concept-message-text {
   margin-top: 48px;
 }
-
-
 
 /*========================================
        # feature
 ========================================*/
 
-.feature-list{
+.feature-list {
   margin-top: 64px;
   display: flex;
   flex-wrap: wrap;
 }
 
-.feature-item{
+.feature-item {
   width: calc(33.3% - 91px * 2 / 3);
   margin-right: 91px;
-  &:last-child{
+  &:last-child {
     margin-right: 0;
   }
 }
 
-.feature-item-text{
+.feature-item-text {
   text-align: center;
   padding: 32px 0;
-  box-shadow:3px 3px 15px #60606029;
+  box-shadow: 3px 3px 15px #60606029;
   font-weight: bold;
   color: $font-color;
 }
-
-
 
 /*========================================
        # about
 ========================================*/
 
-.about{
+.about {
   color: #fff;
   width: 100%;
   height: 478px;
-  background: url(/img/bg.png) center center/ cover  ;
+  background: url(/img/bg.png) center center/ cover;
   position: relative;
 
-  &::after{
+  &::after {
     content: "";
     position: absolute;
     display: block;
@@ -225,135 +211,345 @@ img{
   }
 }
 
-.about-inner{
+.about-inner {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
   z-index: 6;
-  .about-title{
+  .about-title {
     margin-bottom: 40px;
     font-size: 22px;
     font-weight: bold;
   }
 }
 
-
-
 /*========================================
        # products
 ========================================*/
 
-.products{
+.products {
   max-width: 940px;
 }
 
-.products-list{
+.products-list {
   margin-top: 64px;
   display: flex;
   justify-content: space-between;
 }
 
-.products-item{
-  flex:0 0 27.65%;
+.products-item {
+  flex: 0 0 27.65%;
 }
 
-.products-item-link{
+.products-item-link {
   display: block;
   color: $font-color;
   font-size: 14px;
 }
 
-.products-item-text{
+.products-item-text {
   padding: 24px 0 16px;
 }
 
-.products-item-cost{
+.products-item-cost {
   color: #989898;
 }
 
-.products-footer{
+.products-footer {
   text-align: center;
   margin-top: 48px;
 }
-
-
 
 /*========================================
        # news
 ========================================*/
 
+.news {
+  max-width: 1040px;
+}
 
+.news-list {
+  margin-bottom: 48px;
+}
+
+.news-item {
+  padding: 24px 0 22px;
+  border-bottom: 1px solid #e0e0e0;
+  &:first-child {
+    padding-top: 50px;
+  }
+}
+
+.news-item-link {
+  display: flex;
+  align-items: center;
+}
+
+.news-item-header {
+  flex: 0 0 260px;
+  // width: 260px;
+  // height: 160px;
+  margin-right: 40px;
+}
+
+// .news-item-body{
+//   flex: 0 1 100%;
+// }
+
+.news-item-date {
+  font-size: 14px;
+  color: $font-color;
+}
+.news-item-title {
+  font-size: 18px;
+  color: $font-color;
+  font-weight: bold;
+  padding: 10px 0 20px;
+}
+.news-item-text {
+  font-size: 14px;
+  color: #888888;
+  line-height: 1.7143;
+}
+
+.news-footer {
+  text-align: center;
+}
 
 /*========================================
        # concept2
 ========================================*/
 
+.concept2 {
+  margin-bottom: 225px;
+}
+
+.concept2-inner {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.concept2-picture {
+  flex: 0 0 50%;
+  margin-left: 80px;
+}
+
+.concept2-message-title {
+  font-size: 28px;
+  font-weight: bold;
+}
+.concept2-message-text {
+  margin-top: 48px;
+}
 
 /*========================================
        # contact
 ========================================*/
+
+.contact {
+  background: url(/img/contact.png) no-repeat center center / cover;
+  .section-title {
+    color: $primary-color;
+    padding-top: 72px;
+  }
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  border: 0;
+  font-size: 16px;
+  padding: 0.2em 0.5em;
+  border-radius: 2px;
+  box-shadow: 5px 6px 15px rgba(96, 96, 96, 0.16);
+}
+
+input[type="text"],
+input[type="email"] {
+  height: 40px;
+}
+
+textarea {
+  min-height: 122px;
+  resize: vertical;
+}
+
+.contact-form {
+  margin-top: 64px;
+}
+
+.contact-text {
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  span {
+    font-size: 16px;
+    color: #e7728e;
+  }
+}
+
+.contact-list {
+  max-width: 510px;
+  margin: 24px auto 33px;
+}
+
+.contact-item {
+  display: flex;
+  & + & {
+    margin-top: 32px;
+  }
+}
+.contact-item-title {
+  flex: 0 1 100%;
+  background: rgba(62, 161, 209, 0.7);
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 10px;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 0 20px 8px;
+    border-color: transparent transparent transparent rgba(62, 161, 209, 0.7);
+    top: 0;
+    right: -8px;
+  }
+}
+
+.contact-item-kome {
+  color: rgba(231, 114, 142, 1);
+  font-size: 12px;
+  vertical-align: super;
+  line-height: 1;
+}
+
+.contact-item-input {
+  flex: 0 0 320px;
+  margin-left: 18px;
+}
+
+.contact-radio-wrapper{
+  display: inline-flex;
+  border: solid 1px #fff;
+  border-radius: 1px;
+  box-shadow: 5px 5px 15px rgba(96, 96, 96, 0.16);
+}
+
+.contact-radio{
+  position: relative;
+}
+
+.contact-radio-input{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+
+  &:checked + .contact-radio-part{
+    color: #fff;
+    background-color: $primary-color;
+    border-radius: 1px;
+  }
+
+  &:focus + .contact-radio-part{
+    outline: -webkit-focus-ring-color auto 5px;
+  }
+}
+
+.contact-radio-part{
+  display: block;
+  background: #fff;
+  height: 38px;
+  line-height: 38px;
+  color: $primary-color;
+  width: 80px;
+  text-align: center;
+}
+
+
+
+
+
+.contact-footer {
+  text-align: center;
+  padding-bottom: 85px;
+}
+
+.contact-privacy-link{
+  color: $primary-color;
+  text-decoration: underline;
+}
+.contact-footer-submit{
+  margin-top: 51px;
+}
 
 
 /*========================================
        # footer
 ========================================*/
 
-
-.footer{
-  background: #F7F7F7;
+.footer {
+  background: #f7f7f7;
   padding: 42px 40px 12px;
 }
 
-.footer-logo{
+.footer-logo {
   width: 120px;
   margin: 0 auto;
   padding-bottom: 18px;
 }
 
-.footer-nav-list{
+.footer-nav-list {
   display: flex;
   justify-content: center;
 }
 
-.footer-nav-item{
-  &+&{
-   padding-left: 12px;
+.footer-nav-item {
+  & + & {
+    padding-left: 12px;
   }
 }
 
-.footer-nav-item-link{
+.footer-nav-item-link {
   font-size: 12px;
   color: $font-color;
   display: block;
-  padding: .5em 0;
+  padding: 0.5em 0;
 }
 
-.footer-sns-list{
+.footer-sns-list {
   display: flex;
   justify-content: center;
   margin: 20px 0 15px 0;
 }
 
-
-.footer-sns-item{
-  &+&{
+.footer-sns-item {
+  & + & {
     margin-left: 20px;
   }
-
 }
 
-.footer-sns-item-link{
+.footer-sns-item-link {
   display: block;
   padding: 0.2em 0.5em;
   font-size: 22px;
-  color: #3EA1D1;
+  color: #3ea1d1;
 }
 
-.footer-copyright{
+.footer-copyright {
   color: #888888;
   font-size: 12px;
   text-align: center;
- 
 }
-
-
