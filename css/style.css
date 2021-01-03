@@ -59,7 +59,7 @@ img {
 }
 
 /*========================================
-       # hearder
+       # header
 ========================================*/
 .header {
   background: #fff;
@@ -101,11 +101,11 @@ img {
   display: flex;
 }
 
-.hearder-nav-item {
+.header-nav-item {
   margin-left: 46px;
 }
 
-.hearder-nav-item:first-child {
+.header-nav-item:first-child {
   margin-left: 0;
 }
 
@@ -164,10 +164,22 @@ img {
           align-items: center;
 }
 
+@media screen and (max-width: 767px) {
+  .concept-inner {
+    display: block;
+  }
+}
+
 .concept-picture {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
+}
+
+@media screen and (max-width: 767px) {
+  .concept-picture {
+    display: block;
+  }
 }
 
 .concept-message {
@@ -175,6 +187,13 @@ img {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 50%;
           flex: 0 1 50%;
+}
+
+@media screen and (max-width: 767px) {
+  .concept-message {
+    display: block;
+    margin-left: 0;
+  }
 }
 
 .concept-message-title {
@@ -198,13 +217,29 @@ img {
       flex-wrap: wrap;
 }
 
-.feature-item {
-  width: calc(33.3% - 91px * 2 / 3);
-  margin-right: 91px;
+@media screen and (max-width: 767px) {
+  .feature-list {
+    display: block;
+  }
 }
 
-.feature-item:last-child {
-  margin-right: 0;
+@media screen and (min-width: 768px) {
+  .feature-item {
+    width: calc(33.3% - 91px * 2 / 3);
+    margin-right: 91px;
+  }
+  .feature-item:last-child {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .feature-item {
+    margin-bottom: 48.59px;
+  }
+  .feature-item:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .feature-item-text {
@@ -263,18 +298,25 @@ img {
 
 .products-list {
   margin-top: 64px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
-.products-item {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 27.65%;
-          flex: 0 0 27.65%;
+@media screen and (min-width: 768px) {
+  .products-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .products-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 27.65%;
+            flex: 0 0 27.65%;
+  }
 }
 
 .products-item-link {
@@ -316,13 +358,15 @@ img {
   padding-top: 50px;
 }
 
-.news-item-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+@media screen and (min-width: 768px) {
+  .news-item-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .news-item-header {
@@ -361,25 +405,29 @@ img {
   margin-bottom: 225px;
 }
 
-.concept2-inner {
-  max-width: 1200px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+@media screen and (min-width: 768px) {
+  .concept2-inner {
+    max-width: 1200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
-.concept2-picture {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
-  margin-left: 80px;
+@media screen and (min-width: 768px) {
+  .concept2-picture {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    margin-left: 80px;
+  }
 }
 
 .concept2-message-title {
@@ -445,10 +493,12 @@ textarea {
   margin: 24px auto 33px;
 }
 
-.contact-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (min-width: 768px) {
+  .contact-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .contact-item + .contact-item {
@@ -456,9 +506,6 @@ textarea {
 }
 
 .contact-item-title {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 100%;
-          flex: 0 1 100%;
   background: rgba(62, 161, 209, 0.7);
   font-size: 18px;
   font-weight: bold;
@@ -468,6 +515,14 @@ textarea {
   line-height: 40px;
   padding-left: 10px;
   position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .contact-item-title {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
 }
 
 .contact-item-title::after {
@@ -490,11 +545,13 @@ textarea {
   line-height: 1;
 }
 
-.contact-item-input {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 320px;
-          flex: 0 0 320px;
-  margin-left: 18px;
+@media screen and (min-width: 768px) {
+  .contact-item-input {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 320px;
+            flex: 0 0 320px;
+    margin-left: 18px;
+  }
 }
 
 .contact-radio-wrapper {
@@ -543,6 +600,48 @@ textarea {
   padding-bottom: 85px;
 }
 
+.contact-privacy {
+  position: relative;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+}
+
+.contact-privacy-part {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #3EA1D1;
+  background-color: #fff;
+  vertical-align: middle;
+}
+
+.contact-privacy-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.contact-privacy-input:checked + .contact-privacy-part {
+  width: 10px;
+  height: 18px;
+  border-top: 0;
+  border-left: 0;
+  background-color: transparent;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin-bottom: 7px;
+}
+
+.contact-privacy-input:focus + .contact-privacy-part {
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+.contact-privacy-input:checked:focus + .contact-privacy-part {
+  outline: none;
+}
+
 .contact-privacy-link {
   color: #3EA1D1;
   text-decoration: underline;
@@ -575,8 +674,20 @@ textarea {
           justify-content: center;
 }
 
+@media screen and (max-width: 767px) {
+  .footer-nav-list {
+    display: block;
+  }
+}
+
 .footer-nav-item + .footer-nav-item {
   padding-left: 12px;
+}
+
+@media screen and (max-width: 767px) {
+  .footer-nav-item + .footer-nav-item {
+    padding-left: 0;
+  }
 }
 
 .footer-nav-item-link {

@@ -47,7 +47,7 @@ img {
 }
 
 /*========================================
-       # hearder
+       # header
 ========================================*/
 
 .header {
@@ -83,7 +83,7 @@ img {
   display: flex;
 }
 
-.hearder-nav-item {
+.header-nav-item {
   margin-left: 46px;
   &:first-child {
     margin-left: 0;
@@ -141,15 +141,28 @@ img {
   margin-top: 64px;
   display: flex;
   align-items: center;
+
+  @include mq(sp){
+    display: block;
+  }
 }
 
 .concept-picture {
   flex: 0 0 50%;
+
+  @include mq(sp){
+    display: block;
+  }
 }
 
 .concept-message {
   margin-left: 6.667%;
   flex: 0 1 50%;
+
+  @include mq(sp){
+    display: block;
+    margin-left: 0;
+  }
 }
 
 .concept-message-title {
@@ -168,13 +181,27 @@ img {
   margin-top: 64px;
   display: flex;
   flex-wrap: wrap;
+
+  @include mq(sp){
+    display: block;
+  }
 }
 
 .feature-item {
-  width: calc(33.3% - 91px * 2 / 3);
-  margin-right: 91px;
-  &:last-child {
-    margin-right: 0;
+  @include mq(pc){
+    width: calc(33.3% - 91px * 2 / 3);
+    margin-right: 91px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @include mq(sp){
+    margin-bottom: 48.59px;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -233,12 +260,16 @@ img {
 
 .products-list {
   margin-top: 64px;
-  display: flex;
-  justify-content: space-between;
+  @include mq(pc){
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .products-item {
-  flex: 0 0 27.65%;
+  @include mq(pc){
+    flex: 0 0 27.65%;
+  }
 }
 
 .products-item-link {
@@ -281,8 +312,10 @@ img {
 }
 
 .news-item-link {
-  display: flex;
-  align-items: center;
+  @include mq(pc){
+    display: flex;
+    align-items: center;
+  }
 }
 
 .news-item-header {
@@ -325,15 +358,19 @@ img {
 }
 
 .concept2-inner {
-  max-width: 1200px;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
+  @include mq(pc){
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
 }
 
 .concept2-picture {
-  flex: 0 0 50%;
-  margin-left: 80px;
+  @include mq(pc){
+    flex: 0 0 50%;
+    margin-left: 80px;
+  }
 }
 
 .concept2-message-title {
@@ -354,7 +391,7 @@ img {
     color: $primary-color;
     padding-top: 72px;
   }
-}
+ }
 
 input[type="text"],
 input[type="email"],
@@ -394,16 +431,18 @@ textarea {
 .contact-list {
   max-width: 510px;
   margin: 24px auto 33px;
+ 
 }
 
 .contact-item {
-  display: flex;
+  @include mq(pc){
+    display: flex;
+  }
   & + & {
     margin-top: 32px;
   }
 }
 .contact-item-title {
-  flex: 0 1 100%;
   background: rgba(62, 161, 209, 0.7);
   font-size: 18px;
   font-weight: bold;
@@ -413,7 +452,10 @@ textarea {
   line-height: 40px;
   padding-left: 10px;
   position: relative;
-
+  
+  @include mq(pc){
+    flex: 0 1 100%;
+  }
   &::after {
     content: "";
     display: block;
@@ -436,8 +478,10 @@ textarea {
 }
 
 .contact-item-input {
-  flex: 0 0 320px;
-  margin-left: 18px;
+  @include mq(pc){
+    flex: 0 0 320px;
+    margin-left: 18px;
+  }
 }
 
 .contact-radio-wrapper{
@@ -487,6 +531,46 @@ textarea {
   padding-bottom: 85px;
 }
 
+.contact-privacy{
+  position: relative;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+}
+
+.contact-privacy-part{
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border: 1px solid $primary-color;
+  background-color: #fff;
+  vertical-align: middle;
+}
+
+.contact-privacy-input{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+
+  &:checked + .contact-privacy-part{
+    width: 10px;
+    height: 18px;
+    border-top: 0;
+    border-left: 0;
+    background-color: transparent;
+    transform: rotate(45deg);
+    margin-bottom: 7px;
+  }
+  &:focus + .contact-privacy-part{
+    outline: -webkit-focus-ring-color auto 5px;
+  }
+  &:checked:focus + .contact-privacy-part{
+    outline: none;
+  }
+
+}
+
 .contact-privacy-link{
   color: $primary-color;
   text-decoration: underline;
@@ -514,11 +598,22 @@ textarea {
 .footer-nav-list {
   display: flex;
   justify-content: center;
+
+  @include mq(sp){
+    display: block;
+    // text-align: center;
+  }
 }
 
 .footer-nav-item {
   & + & {
     padding-left: 12px;
+  }
+
+  @include mq(sp){
+    & + & {
+      padding-left: 0;
+    }
   }
 }
 
@@ -553,3 +648,4 @@ textarea {
   font-size: 12px;
   text-align: center;
 }
+
