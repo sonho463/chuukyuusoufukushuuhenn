@@ -13,8 +13,23 @@ img {
   width: 100%;
 }
 
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: content-box;
+
+  @include mq(sp){
+    padding: 0 15px;    
+  }
+}
+
 .section {
-  margin-top: 160px !important;
+  margin-top: 160px;
+
+  @include mq(sp){
+    margin-top: 96px;
+  }
 }
 
 // sectionのタイトル
@@ -23,6 +38,10 @@ img {
   font-weight: 600;
   text-align: center;
   line-height: 1;
+
+  @include mq(sp){
+    font-size: 30px;
+  }
 
   // タイトルの下の線
   &::after {
@@ -59,16 +78,14 @@ img {
   z-index: 100;
 }
 
-.inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 40px;
-  box-sizing: content-box;
-}
 
 .header-inner {
   display: flex;
   align-items: center;
+
+  @include mq(sp){
+    height: 60px;
+  }
 }
 
 .header-nav {
@@ -101,6 +118,10 @@ img {
 // hearderで隠れた部分を出してあげる
 .main {
   padding-top: 70px;
+
+  @include mq(sp){
+    padding-top: 60px;
+  }
 }
 
 /*========================================
@@ -112,13 +133,24 @@ img {
 }
 
 .top-picture {
-  padding-top: 55%;
-  background: url(/img/top.png) no-repeat top right / 82.5%;
+  @include mq(pc){
+    padding-top: 55%;
+    background: url(/img/top.png) no-repeat top right / 82.5%;
+  }
+  @include mq(sp){
+    padding-top: 120%;
+    background: url(/img/sp/top-sp.png) no-repeat center / cover ;
+  }
+
 }
 
 .top-title {
   font-size: 26px;
   font-weight: bold;
+
+  @include mq(sp){
+    margin-top: 40px;
+  }
 }
 
 .top-text {
@@ -126,11 +158,13 @@ img {
 }
 
 .top-message {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #fff;
-  padding: 92px 40px 92px 0;
+  @include mq(pc){
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    padding: 92px 40px 92px 0;
+  }
 }
 
 /*========================================
@@ -138,12 +172,14 @@ img {
 ========================================*/
 
 .concept-inner {
-  margin-top: 64px;
-  display: flex;
-  align-items: center;
+  @include mq(pc){
+    margin-top: 64px;
+    display: flex;
+    align-items: center;
+  }
 
   @include mq(sp){
-    display: block;
+    margin-top: 48px;
   }
 }
 
@@ -156,12 +192,14 @@ img {
 }
 
 .concept-message {
-  margin-left: 6.667%;
-  flex: 0 1 50%;
+  @include mq(pc){
+    margin-left: 6.667%;
+    flex: 0 1 50%;
+  }
 
   @include mq(sp){
-    display: block;
     margin-left: 0;
+    margin-top: 40px;
   }
 }
 
@@ -171,6 +209,10 @@ img {
 }
 .concept-message-text {
   margin-top: 48px;
+
+  @include mq(sp){
+    margin-top: 32px;
+  }
 }
 
 /*========================================
@@ -178,12 +220,14 @@ img {
 ========================================*/
 
 .feature-list {
-  margin-top: 64px;
-  display: flex;
-  flex-wrap: wrap;
+  @include mq(pc){
+    margin-top: 64px;
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   @include mq(sp){
-    display: block;
+    margin-top: 48px;
   }
 }
 
@@ -219,10 +263,14 @@ img {
 
 .about {
   color: #fff;
-  width: 100%;
-  height: 478px;
-  background: url(/img/bg.png) center center/ cover;
+  padding: 120px 0;
   position: relative;
+  background: url(/img/bg.png) center center/ cover;
+
+  @include mq(sp){
+    background: url(/img/sp/bg-sp.png) center center/ cover;
+    padding: 180px 0 55px;
+  }
 
   &::after {
     content: "";
@@ -240,13 +288,23 @@ img {
 
 .about-inner {
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
   z-index: 6;
+
   .about-title {
     margin-bottom: 40px;
     font-size: 22px;
     font-weight: bold;
+
+    @include mq(sp){
+      font-size: 20px;
+      margin-bottom: 32px;
+    }
+  }
+  .about-text{
+    font-weight: bold;
+    @include mq(sp){
+      font-size: 14px;
+    }
   }
 }
 
@@ -256,6 +314,10 @@ img {
 
 .products {
   max-width: 940px;
+
+  @include mq(sp){
+    max-width: 260px;
+  }
 }
 
 .products-list {
@@ -269,6 +331,10 @@ img {
 .products-item {
   @include mq(pc){
     flex: 0 0 27.65%;
+  }
+
+  @include mq(sp){
+    margin-bottom: 48px;
   }
 }
 
@@ -301,6 +367,10 @@ img {
 
 .news-list {
   margin-bottom: 48px;
+
+  @include mq(sp){
+    padding: 0 33px;
+  }
 }
 
 .news-item {
@@ -319,10 +389,10 @@ img {
 }
 
 .news-item-header {
-  flex: 0 0 260px;
-  // width: 260px;
-  // height: 160px;
-  margin-right: 40px;
+  @include mq(pc){
+    flex: 0 0 260px;
+    margin-right: 40px;
+  }
 }
 
 // .news-item-body{
@@ -355,6 +425,10 @@ img {
 
 .concept2 {
   margin-bottom: 225px;
+
+  @include mq(sp){
+    margin-bottom: 96px;
+  }
 }
 
 .concept2-inner {
@@ -387,6 +461,10 @@ img {
 
 .contact {
   background: url(/img/contact.png) no-repeat center center / cover;
+
+  @include mq(sp){
+    padding: 0 28px;
+  }
   .section-title {
     color: $primary-color;
     padding-top: 72px;
@@ -593,15 +671,20 @@ textarea {
   width: 120px;
   margin: 0 auto;
   padding-bottom: 18px;
+
+  @include mq(sp){
+    padding-bottom: 16px;
+  }
 }
 
 .footer-nav-list {
-  display: flex;
-  justify-content: center;
+  @include mq(pc){
+    display: flex;
+    justify-content: center;
+  }
 
   @include mq(sp){
-    display: block;
-    // text-align: center;
+    text-align: center;
   }
 }
 
@@ -621,13 +704,15 @@ textarea {
   font-size: 12px;
   color: $font-color;
   display: block;
-  padding: 0.5em 0;
+  padding: .665em 0;
 }
 
 .footer-sns-list {
   display: flex;
   justify-content: center;
   margin: 20px 0 15px 0;
+
+  margin-bottom: 5px;
 }
 
 .footer-sns-item {
