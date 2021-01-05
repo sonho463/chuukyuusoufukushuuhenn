@@ -12,5 +12,71 @@ $font-color:#333333;
 // size テキスト
 $font-size-main: 16px;
 
+/*========================================
+         # 全体共通部分
+  ========================================*/
 
+body {
+  font-size: $font-size-main;
+  color: $font-color;
+  font-family: "ヒラギノ明朝 ProN", serif;
+  line-height: (27 / 16);
+}
+
+img {
+  width: 100%;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: content-box;
+
+  @include mq(sp){
+    padding: 0 15px;    
+  }
+}
+
+.section {
+  margin-top: 160px;
+
+  @include mq(sp){
+    margin-top: 96px;
+  }
+}
+
+// sectionのタイトル
+.section-title {
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1;
+
+  @include mq(sp){
+    font-size: 30px;
+  }
+
+  // タイトルの下の線
+  &::after {
+    content: "";
+    display: block;
+    margin: 16px auto 0;
+    background: $primary-color;
+    height: 2px;
+    width: 60px;
+  }
+}
+
+
+// moreのボタン
+.util-link {
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  color: $primary-color;
+  font-weight: 600;
+  border: 1px solid $primary-color;
+  display: inline-block;
+  padding: 10px 54px;
+}
 

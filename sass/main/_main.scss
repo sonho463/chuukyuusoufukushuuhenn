@@ -2,68 +2,68 @@
          # 全体共通部分
   ========================================*/
 
-body {
-  font-size: $font-size-main;
-  color: $font-color;
-  font-family: "ヒラギノ明朝 ProN", serif;
-  line-height: (27 / 16);
-}
+// body {
+//   font-size: $font-size-main;
+//   color: $font-color;
+//   font-family: "ヒラギノ明朝 ProN", serif;
+//   line-height: (27 / 16);
+// }
 
-img {
-  width: 100%;
-}
+// img {
+//   width: 100%;
+// }
 
-.inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 40px;
-  box-sizing: content-box;
+// .inner {
+//   max-width: 1200px;
+//   margin: 0 auto;
+//   padding: 0 40px;
+//   box-sizing: content-box;
 
-  @include mq(sp){
-    padding: 0 15px;    
-  }
-}
+//   @include mq(sp){
+//     padding: 0 15px;    
+//   }
+// }
 
-.section {
-  margin-top: 160px;
+// .section {
+//   margin-top: 160px;
 
-  @include mq(sp){
-    margin-top: 96px;
-  }
-}
+//   @include mq(sp){
+//     margin-top: 96px;
+//   }
+// }
 
-// sectionのタイトル
-.section-title {
-  font-size: 40px;
-  font-weight: 600;
-  text-align: center;
-  line-height: 1;
+// // sectionのタイトル
+// .section-title {
+//   font-size: 40px;
+//   font-weight: 600;
+//   text-align: center;
+//   line-height: 1;
 
-  @include mq(sp){
-    font-size: 30px;
-  }
+//   @include mq(sp){
+//     font-size: 30px;
+//   }
 
-  // タイトルの下の線
-  &::after {
-    content: "";
-    display: block;
-    margin: 16px auto 0;
-    background: $primary-color;
-    height: 2px;
-    width: 60px;
-  }
-}
+//   // タイトルの下の線
+//   &::after {
+//     content: "";
+//     display: block;
+//     margin: 16px auto 0;
+//     background: $primary-color;
+//     height: 2px;
+//     width: 60px;
+//   }
+// }
 
-// moreのボタン
-.util-link {
-  font-size: 14px;
-  letter-spacing: 0.1em;
-  color: $primary-color;
-  font-weight: 600;
-  border: 1px solid $primary-color;
-  display: inline-block;
-  padding: 10px 54px;
-}
+// // moreのボタン
+// .util-link {
+//   font-size: 14px;
+//   letter-spacing: 0.1em;
+//   color: $primary-color;
+//   font-weight: 600;
+//   border: 1px solid $primary-color;
+//   display: inline-block;
+//   padding: 10px 54px;
+// }
 
 /*========================================
        # header
@@ -88,8 +88,18 @@ img {
   }
 }
 
+// .button{
+//   right: -100px;
+// }
+
 .header-nav {
   margin-left: auto;
+
+  @include mq(sp){
+    top: 60px;
+    width: 60%;
+    background-color: $primary-color;
+  }
 }
 
 .header-logo {
@@ -114,6 +124,35 @@ img {
   line-height: 70px;
   letter-spacing: (1.6 / 16); // 0.1emでも同じ (AV1.6px / 文字サイス16px )
 }
+
+.drawer--right{
+  .drawer-hamburger{
+    right: 3px;
+  }
+}
+
+.drawer--right.drawer-open{
+  .drawer-hamburger{
+    right:0;
+  }
+}
+
+  
+   
+  
+
+.drawer-hamburger-icon{
+  background-color: $primary-color;
+  &::before,&::after{
+    background-color: $primary-color;
+  }
+  // .drawer-open &{
+
+  //   right: -80px;
+  // }
+}
+
+
 
 // hearderで隠れた部分を出してあげる
 .main {
@@ -219,6 +258,12 @@ img {
        # feature
 ========================================*/
 
+.feature{
+  @include mq(sp){
+    max-width: 340px;
+  }
+}
+
 .feature-list {
   @include mq(pc){
     margin-top: 64px;
@@ -265,7 +310,9 @@ img {
   color: #fff;
   padding: 120px 0;
   position: relative;
-  background: url(/img/bg.png) center center/ cover;
+  @include mq(pc){
+    background: url(/img/bg.png) center center/ cover;
+  }
 
   @include mq(sp){
     background: url(/img/sp/bg-sp.png) center center/ cover;
@@ -369,7 +416,7 @@ img {
   margin-bottom: 48px;
 
   @include mq(sp){
-    padding: 0 33px;
+    padding: 0 18px;
   }
 }
 
@@ -450,9 +497,21 @@ img {
 .concept2-message-title {
   font-size: 28px;
   font-weight: bold;
+
+  @include mq(sp){
+    font-size: 20px;
+    margin-top: 40px;
+  }
 }
+
 .concept2-message-text {
   margin-top: 48px;
+
+  @include mq(sp){
+    margin-top: 32px;
+    font-size: 14px;
+    line-height: 1.714;
+  }
 }
 
 /*========================================
@@ -461,14 +520,17 @@ img {
 
 .contact {
   background: url(/img/contact.png) no-repeat center center / cover;
-
+  
   @include mq(sp){
     padding: 0 28px;
   }
-  .section-title {
-    color: $primary-color;
-    padding-top: 72px;
-  }
+    h2 {
+      padding-top: 72px;
+      color: $primary-color;
+      @include mq(sp){
+        padding-top: 57px;
+      }
+    }
  }
 
 input[type="text"],
@@ -492,14 +554,18 @@ textarea {
   resize: vertical;
 }
 
-.contact-form {
-  margin-top: 64px;
-}
+// .contact-form {
+//   margin-top: 64px;
+// }
 
 .contact-text {
   font-size: 14px;
   letter-spacing: 0.1em;
   text-align: center;
+  margin-top: 64px;
+  @include mq(sp){
+    margin-top: 33px;
+  }
   span {
     font-size: 16px;
     color: #e7728e;
@@ -508,7 +574,7 @@ textarea {
 
 .contact-list {
   max-width: 510px;
-  margin: 24px auto 33px;
+  margin: 24px auto 0;
  
 }
 
@@ -516,9 +582,9 @@ textarea {
   @include mq(pc){
     display: flex;
   }
-  & + & {
+  
     margin-top: 32px;
-  }
+  
 }
 .contact-item-title {
   background: rgba(62, 161, 209, 0.7);
@@ -528,23 +594,30 @@ textarea {
   text-align: center;
   height: 40px;
   line-height: 40px;
-  padding-left: 10px;
   position: relative;
+
+  @include mq(sp){
+    display: inline-block;
+    font-size: 14px;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 14.5px;
+  }
   
   @include mq(pc){
     flex: 0 1 100%;
-  }
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 20px 0 20px 8px;
-    border-color: transparent transparent transparent rgba(62, 161, 209, 0.7);
-    top: 0;
-    right: -8px;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 20px 0 20px 8px;
+      border-color: transparent transparent transparent rgba(62, 161, 209, 0.7);
+      top: 0;
+      right: -8px;
+    }
   }
 }
 
@@ -559,6 +632,10 @@ textarea {
   @include mq(pc){
     flex: 0 0 320px;
     margin-left: 18px;
+  }
+
+  @include mq(sp){
+    margin-top: 3px;
   }
 }
 
@@ -607,6 +684,10 @@ textarea {
 .contact-footer {
   text-align: center;
   padding-bottom: 85px;
+
+  @include mq(sp){
+    padding-bottom: 57px;
+  }
 }
 
 .contact-privacy{
@@ -653,8 +734,21 @@ textarea {
   color: $primary-color;
   text-decoration: underline;
 }
+
+.contact-footer-text{
+  margin-top: 33px;
+
+  @include mq(sp){
+    margin-top: 27px;
+  }
+}
+
 .contact-footer-submit{
   margin-top: 51px;
+
+  @include mq(sp){
+    margin-top: 29px;
+  }
 }
 
 
@@ -665,6 +759,10 @@ textarea {
 .footer {
   background: #f7f7f7;
   padding: 42px 40px 12px;
+
+  @include mq(sp){
+    padding: 40px 0 17px;
+  }
 }
 
 .footer-logo {
@@ -711,7 +809,6 @@ textarea {
   display: flex;
   justify-content: center;
   margin: 20px 0 15px 0;
-
   margin-bottom: 5px;
 }
 
@@ -726,6 +823,10 @@ textarea {
   padding: 0.2em 0.5em;
   font-size: 22px;
   color: #3ea1d1;
+ 
+  &:hover{
+    opacity: 0.5;
+  }
 }
 
 .footer-copyright {
