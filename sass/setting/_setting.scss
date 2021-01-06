@@ -78,5 +78,20 @@ img {
   border: 1px solid $primary-color;
   display: inline-block;
   padding: 10px 54px;
+  transition: color .5s, background-color .5s;
+  
+  &.-active{
+    color: #fff;
+    background-color: $primary-color;
+  }
+
+  @include mq(pc){
+    &:not(.-submit){
+      &:hover{
+        color: #fff;
+        background-color: $primary-color;
+      }
+    }
+  }
 }
 
