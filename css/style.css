@@ -57,6 +57,7 @@ img {
   font-weight: 600;
   text-align: center;
   line-height: 1;
+  font-family: "Noto Serif JP",serif;
 }
 
 @media screen and (max-width: 767px) {
@@ -99,9 +100,6 @@ img {
 }
 
 /*========================================
-         # 全体共通部分
-  ========================================*/
-/*========================================
        # header
 ========================================*/
 .header {
@@ -111,6 +109,7 @@ img {
   left: 0;
   right: 0;
   z-index: 100;
+  font-family: "Noto Serif JP",serif;
 }
 
 .header-inner {
@@ -130,6 +129,7 @@ img {
 
 .header-nav {
   margin-left: auto;
+  font-family: "Noto Serif JP",serif;
 }
 
 @media screen and (max-width: 767px) {
@@ -234,6 +234,7 @@ img {
         # top
 ========================================*/
 .top {
+  font-family: "Noto Serif JP",serif;
   position: relative;
 }
 
@@ -310,6 +311,10 @@ img {
   }
 }
 
+.concept-message {
+  font-family: "Noto Serif JP",serif;
+}
+
 @media screen and (min-width: 768px) {
   .concept-message {
     margin-left: 6.667%;
@@ -327,8 +332,9 @@ img {
 }
 
 .concept-message-title {
-  font-weight: bold;
+  font-weight: 900;
   font-size: 20px;
+  font-family: "Noto Serif JP",serif;
 }
 
 .concept-message-text {
@@ -344,6 +350,10 @@ img {
 /*========================================
        # feature
 ========================================*/
+.feature {
+  font-family: "Noto Serif JP",serif;
+}
+
 @media screen and (max-width: 767px) {
   .feature {
     max-width: 340px;
@@ -421,6 +431,7 @@ img {
        # about
 ========================================*/
 .about {
+  font-family: "Noto Serif JP",serif;
   color: #fff;
   padding: 120px 0;
   position: relative;
@@ -484,6 +495,7 @@ img {
        # products
 ========================================*/
 .products {
+  font-family: "Noto Serif JP",serif;
   max-width: 940px;
 }
 
@@ -561,6 +573,7 @@ img {
        # news
 ========================================*/
 .news {
+  font-family: "Noto Serif JP",serif;
   max-width: 1040px;
 }
 
@@ -652,6 +665,7 @@ img {
        # concept2
 ========================================*/
 .concept2 {
+  font-family: "Noto Serif JP",serif;
   margin-bottom: 225px;
 }
 
@@ -714,6 +728,7 @@ img {
        # contact
 ========================================*/
 .contact {
+  font-family: "Noto Serif JP",serif;
   background: url(/img/contact.png) no-repeat center center/cover;
 }
 
@@ -982,6 +997,7 @@ textarea {
        # footer
 ========================================*/
 .footer {
+  font-family: "Noto Serif JP",serif;
   background: #f7f7f7;
   padding: 42px 40px 12px;
 }
