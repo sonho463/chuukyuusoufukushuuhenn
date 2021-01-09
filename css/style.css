@@ -993,6 +993,16 @@ textarea {
   }
 }
 
+.contact-message {
+  text-align: center;
+  margin-top: 60px;
+  display: none;
+}
+
+.contact-message.-error {
+  color: #f00;
+}
+
 /*========================================
        # footer
 ========================================*/
